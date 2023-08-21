@@ -6,12 +6,11 @@ import {
 
 const INITIAL_STATE = {
   movies: [],
-
   isError: false,
   isLoading: false,
 };
 
-export default (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => { 
   switch (action.type) {
     case FETCH_MOVIES_INITIATED:
       return {

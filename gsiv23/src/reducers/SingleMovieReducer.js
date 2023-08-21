@@ -2,20 +2,16 @@ import {
     FETCH_MOVIE_INITIATED,
     FETCH_MOVIE_FAILED,
     FETCH_MOVIE_SUCCEEDED,
-    MOVIE_CLICKED
-  } from "../actions/types";
+  } from "../actions/type";
   
   const INITIAL_STATE = {
-    movie: null,
-    credits: null,
-   
-    images: null,
-    clickedMovieId: "",
+    movie: [],
+    credits: [],
     isError: false,
     isLoading: false
   };
   
-  export default (state = INITIAL_STATE, action) => {
+  export default  (state = INITIAL_STATE, action) => {
     switch (action.type) {
       case FETCH_MOVIE_INITIATED:
         return {
@@ -31,23 +27,15 @@ import {
           isLoading: false
         };
   
-      case FETCH_MOVIE_SUCCEEDED:
-        return {
+      case FETCH_MOVIE_SUCCEEDED:      
+      return {
           ...state,
-          movie: action.payload,
-          credits: { ...action.payload.credits },
-          
+          movie: {...action.payload},
+          credits: { ...action.payload.credits },         
           images: { ...action.payload.images },
           isError: false,
           isLoading: false
         };
-  
-      case MOVIE_CLICKED:
-        return {
-          ...state,
-          clickedMovieId: action.payload
-        };
-  
       default:
         return state;
     }

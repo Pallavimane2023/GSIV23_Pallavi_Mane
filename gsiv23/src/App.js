@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<ListPage />} />
-          <Route exact path="/singlemoviepage" element={<SingleMoviePage />} />
+          <Route exact path="/singlemoviepage/:id" element={<SingleMoviePage />} />
         </Routes>
       </BrowserRouter>
     </div>
