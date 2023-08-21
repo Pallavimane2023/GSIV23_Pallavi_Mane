@@ -4,10 +4,12 @@ import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
 import SingleMoviePage from "./components/SingleMoviePage";
+import PrimarySearchAppBar from "./components/MovieSearch";
 
 function App() {
   return (
     <div className="App">
+      
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<ListPage />} />
