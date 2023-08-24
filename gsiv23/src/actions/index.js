@@ -26,7 +26,6 @@ export const fetchMovies = (url) => async (dispatch) => {
         movie.details = responseDetails.data;
       })
     );
-
     dispatch({
       type: FETCH_MOVIES_SUCCEEDED,
       payload: response?.data?.results,

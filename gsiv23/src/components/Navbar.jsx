@@ -18,12 +18,12 @@ export default function Navbar(props) {
       <AppBar position="static">
         <Toolbar>
           <Typography
-            style={{ marginRight: "1000px" }}
+            style={{ marginRight: "900px" }}
             variant="h6"
             component="div"
             sx={{ flexGrow: 1 }}
           >
-            MovieHall
+            MovieHouse
           </Typography>
           {movieCardData ? (
             <MovieSearch
